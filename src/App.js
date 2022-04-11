@@ -3,6 +3,10 @@ import data from './data'
 import Menu from './menu'
 import Input from './input'
 
+import SetState from './setState'; //测试setstate的同一操作下   批量更新
+
+import LifeCircle from './liftcircle'; // 测试生命周期
+
 const data5 = function(){
   console.log(111);
   return "123"
@@ -41,7 +45,12 @@ function App() {
                  />
             })}
         </ul>
+        <h1>测试受控组件</h1>
         <Input></Input>
+        <h1>测试setstate</h1>
+        <SetState></SetState>
+        <h1>测试生命周期</h1>
+        <LifeCircle parentInfo={"父级传递的信息123"}></LifeCircle>
     </div>
   );
 }
